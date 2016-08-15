@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <!--HEADER-->
+    <div class="page-header">
+        <h1 class="container"><img id="logoImg" src="~/images/rsz_transparentlogo.png" /></h1>
+    </div>
+
+    <!--NAVBAR-->
+    <nav class="navbar navbar-static-top" id="navvy">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About the Game</a></li>
+                    <li><a href="#contact">Video Clips</a></li>
+                    <li><a href="#contact">Game Cheats</a></li>
+                    <li><a href="http://www.lifeisstrange.com/talk" target="_blank">Talk About It</a></li>
+                </ul>   
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+        @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
